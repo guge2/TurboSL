@@ -1,0 +1,5 @@
+*.ckpt
+*.obj
+__pycache__/
+.DS_Store
+*.ply
