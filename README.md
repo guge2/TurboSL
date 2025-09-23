@@ -11,20 +11,20 @@ This project is built on top of the following source code for:
 2. Install the requirements file with:
 
 ```
-pip install -r /code/requirements.txt
+pip install -r code/requirements.txt
 ```
 
 ## Dataset 
 
-A sample dataset for Structured Light images are provided in `/data`. This includes the raw and undistorted images (in `/data/images`), the projection patterns (in `/data/patterns`), the calibration parameters, and object mask.
+A sample dataset for Structured Light images are provided in `data`. This includes the raw and undistorted images (in `data/images`), the projection patterns (in `data/patterns`), the calibration parameters, and object mask.
 
 ## Training
 
-To train the model, you can specify the training parameters in `/code/configs/code/configs/neus-sl-geoalbamb-capture-blur.yaml`, and run `/code/launch.py`.
+To train the model, you can specify the training parameters in `code/configs/code/configs/neus-sl-geoalbamb-capture-blur.yaml`, and run `code/launch.py`.
 
-The training outputs will be stored under `/code/exp/[experiment_id]`.
+The training outputs will be stored under `code/exp/[experiment_id]`.
 
-The reference training results are provided under `/code/train_david`.
+The reference training results are provided under `code/train_david`.
 
 ## Citation
 
