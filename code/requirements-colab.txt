@@ -25,22 +25,23 @@ PyMCubes==0.1.6
 
 # ========== Image Processing ==========
 opencv-python>=4.10.0.84
-imageio>=2.31.6
+imageio>=2.33
 imageio-ffmpeg>=0.4.9
-scikit-image==0.22.0
-Pillow>=10.0.1
+scikit-image==0.25.2
+Pillow>=10.1
 
 # ========== Scientific Computing ==========
-numpy>=1.26.4
-scipy>=1.12,<1.14
-scikit-learn>=1.4.2
+# Match Colab-preinstalled packages (opencv, thinc, etc.) which require NumPy 2.x.
+numpy>=2.0,<2.3
+scipy>=1.14.1
+scikit-learn>=1.5.2
 pandas>=2.1.3
 
 # ========== Math Utilities ==========
 numpy-quaternion==2023.0.3
 pyquaternion==0.9.9
 gpytoolbox==0.3.7
-scikit-spatial==7.2.0
+scikit-spatial==9.0.1
 pyransac3d==0.6.0
 
 # ========== Visualization ==========
