@@ -6,7 +6,8 @@ pytorch-lightning==1.9.5
 omegaconf>=2.2.3
 tensorboard>=2.15.0
 
-# Neural rendering
+# Neural rendering and build tools
+ninja>=1.11.0
 nerfacc==0.3.5
 
 # 3D processing
