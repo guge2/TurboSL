@@ -7,7 +7,7 @@ omegaconf>=2.2.3
 tensorboard>=2.15.0
 
 # Neural rendering
-nerfacc>=0.3.3
+nerfacc==0.3.5
 
 # 3D processing
 open3d>=0.17.0

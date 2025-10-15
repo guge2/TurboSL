@@ -372,7 +372,7 @@ class NeuSSLWZCamproblurSystem(BaseSystem):
             self.save_img_sequence(
                 f"it{self.global_step}-test",
                 f"it{self.global_step}-test",
-                '(\d+)\.png',
+                r'(\d+)\.png',
                 save_format='mp4',
                 fps=30
             )
