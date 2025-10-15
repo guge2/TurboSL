@@ -1,55 +1,74 @@
 # TurboSL Colab Requirements
-# Colab-optimized version without local file paths and with flexible versions
+# Colab-optimized version: removed local file paths, kept all functional dependencies
 
-# Core dependencies
+# ========== Core Training Framework ==========
 pytorch-lightning==1.9.5
-omegaconf>=2.2.3
-tensorboard>=2.15.0
+lightning-utilities==0.9.0
 
-# Neural rendering and build tools
+# ========== Configuration ==========
+omegaconf==2.2.3
+ConfigArgParse==1.7
+PyYAML
+addict==2.4.0
+
+# ========== Neural Rendering ==========
 ninja>=1.11.0
 nerfacc==0.3.5
 
-# 3D processing
+# ========== 3D Processing ==========
 open3d>=0.17.0
-trimesh>=4.0.0
-PyMCubes>=0.1.4
+trimesh==4.0.2
+PyMCubes==0.1.4
 
-# Image processing
-opencv-python>=4.8.0
-imageio>=2.31.0
-imageio-ffmpeg>=0.4.9
-scikit-image>=0.22.0
-Pillow>=10.0.0
+# ========== Image Processing ==========
+opencv-python==4.8.1.78
+imageio==2.31.6
+imageio-ffmpeg==0.4.9
+scikit-image==0.22.0
+Pillow==10.0.1
 
-# Scientific computing
+# ========== Scientific Computing ==========
 numpy
-scipy>=1.11.0
-scikit-learn>=1.3.0
-pandas>=2.1.0
+scipy==1.11.3
+scikit-learn==1.3.2
+pandas==2.1.3
 
-# Math utilities
-numpy-quaternion>=2023.0.0
-pyquaternion>=0.9.9
-gpytoolbox>=0.2.0
-scikit-spatial>=7.2.0
-pyransac3d>=0.6.0
+# ========== Math Utilities ==========
+numpy-quaternion==2023.0.3
+pyquaternion==0.9.9
+gpytoolbox==0.2.0
+scikit-spatial==7.2.0
+pyransac3d==0.6.0
 
-# Visualization
-matplotlib>=3.8.0
-plotly>=5.18.0
+# ========== Visualization ==========
+matplotlib==3.8.1
+plotly==5.18.0
 
-# Configuration and utilities
-ConfigArgParse>=1.7
-PyYAML
-addict>=2.4.0
-tqdm>=4.66.0
-rich>=13.6.0
+# ========== Deep Learning Utilities ==========
+torch-efficient-distloss==0.1.3
+torchmetrics==1.2.0
+torchinfo==1.8.0
 
-# Metrics and logging
-torchmetrics>=1.2.0
-torchinfo>=1.8.0
+# ========== Logging and Monitoring ==========
+tensorboard==2.15.1
+tqdm==4.66.1
+rich==13.6.0
 
-# Additional utilities
-requests>=2.31.0
-h5py>=3.11.0
+# ========== Networking and Data ==========
+requests==2.31.0
+h5py==3.11.0
+
+# ========== Development Tools ==========
+pybind11==2.11.1
+
+# ========== Additional Dependencies ==========
+# Packages used by the code that weren't in the minimal list
+packaging>=23.2
+
+# Note: The following packages are excluded because they have issues in Colab:
+# - mkl-random, mkl-fft, mkl-service (local file paths, not essential)
+# - numpy @ file://, six @ file://, typing_extensions @ file:// (use Colab defaults)
+# - torch, torchvision (Colab pre-installed, avoid conflicts)
+# - tinycudann (installed separately via notebook due to compilation requirements)
+# - bpy, dash, Flask, ipython, jupyter (not needed for training)
+# - Cython, epdb, graphviz (development tools, not runtime dependencies)
