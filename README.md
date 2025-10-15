@@ -1,32 +1,32 @@
-# TurboSL: Dense, Accurate and Fast 3D by Neural Inverse Structured Light
-### [Project Page](https://www.dgp.toronto.edu/turbosl/) 
+# TurboSL: 基于神经逆结构光的密集、精确、快速3D重建
+### [项目主页](https://www.dgp.toronto.edu/turbosl/) 
 
-## Installation
+## 安装
 
-This project is built on top of the following source code for:
-### [Neural Surface Reconstruction based on Instant-NGP](https://github.com/bennyguo/instant-nsr-pl)
+本项目基于以下源代码构建：
+### [基于Instant-NGP的神经表面重建](https://github.com/bennyguo/instant-nsr-pl)
 
-1. Follow the steps in the repo above for installing PyTorch and tiny-cuda-nn.
+1. 按照上述仓库的步骤安装PyTorch和tiny-cuda-nn。
 
-2. Install the requirements file with:
+2. 使用以下命令安装依赖：
 
 ```
 pip install -r code/requirements.txt
 ```
 
-## Dataset 
+## 数据集
 
-A sample dataset for Structured Light images are provided in `data`. This includes the raw and undistorted images (in `data/images`), the projection patterns (in `data/patterns`), the calibration parameters, and object mask.
+`data`目录中提供了结构光图像的示例数据集，包括原始和去畸变图像（`data/images`）、投影图案（`data/patterns`）、标定参数和物体掩码。
 
-## Training
+## 训练
 
-To train the model, you can specify the training parameters in `code/configs/code/configs/neus-sl-geoalbamb-capture-blur.yaml`, and run `code/launch.py`.
+在`code/configs/neus-sl-geoalbamb-capture-blur.yaml`中配置训练参数，然后运行`code/launch.py`。
 
-The training outputs will be stored under `code/exp/[experiment_id]`.
+训练输出将保存在`code/exp/[experiment_id]`目录下。
 
-The reference training results are provided under `code/train_david`.
+参考训练结果见`code/train_david`目录。
 
-## Citation
+## 引用
 
 ```
 @inproceedings{mirdehghan2024turbosl,
@@ -38,6 +38,7 @@ The reference training results are provided under `code/train_david`.
 }
 ```
 
-## Acknowledgments
+## 致谢
 
-We thank [Yuanchen Guo](https://github.com/bennyguo) for their implementation of Neural Surface Reconstruction with Instant-NGP.
+感谢[Yuanchen Guo](https://github.com/bennyguo)提供的Instant-NGP神经表面重建实现。
+
